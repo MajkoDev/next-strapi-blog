@@ -1,8 +1,8 @@
 export default function PostPreview({ post }) {
   return (
-    <>
-        <h2>{post.attributes.title}</h2>
+    <div className="postPreview">
+        <h3>{post.attributes.title}</h3>
         <p>{post.attributes.description}</p>
-    </>
+    </div>
   );
 }
