@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 export default function Home({ posts, title }) {
   console.log(posts);
 
