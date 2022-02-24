@@ -1,11 +1,21 @@
 import axios from "axios";
+import Markdownit from "markdown-it";
+
 
 export default function PostPage({post}) {
+    const MarkdownIt = require('markdown-it')
+    const md = new MarkdownIt();
+
+    const htmlContent = md.render(post.attributes.content)
+
   return <article>
       <header>
           <h1>{post.attributes.title}</h1>
           <h2>{post.attributes.description}</h2>
       </header>
+      <section dangerouslySetInnerHTML={{__html: htmlContent }}>
+          
+      </section>
   </article>;
 }
 
