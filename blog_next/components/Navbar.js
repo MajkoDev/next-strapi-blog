@@ -1,24 +1,21 @@
-import Link from 'next/link'
+import Link from "next/link";
 
+export default function NavBar() {
+  return (
+    <nav className='navBar'>
+      <div className='container'>
+        <Link href='/'>
+          <a className='title'>Devistry</a>
+        </Link>
 
-export default function NavBar(){
-    return(
-        <nav className="navBar">
-            <div className="container">
-            <Link href="/">
-            <a className="title">Devistry</a>
+        <ul>
+          <li>
+            <Link href='/posts'>
+              <a>All posts</a>
             </Link>
-            
-
-            <ul>
-                <li>
-                    <Link href="/posts"> 
-                    <a>All posts</a>
-                    </Link>
-                    
-                </li>
-            </ul>
-            </div>
-        </nav>
-    )
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
 }
